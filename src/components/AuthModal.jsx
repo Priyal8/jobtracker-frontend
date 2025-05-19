@@ -8,8 +8,7 @@ export default function AuthModal({ type = "login", onClose }) {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     console.log(e.target.value)
@@ -24,7 +23,7 @@ export default function AuthModal({ type = "login", onClose }) {
     setError("");
 
     try {
-      const endpoint = isLogin ? `${API_URL}/auth/login` : `${API_URL}/auth/register`; 
+      const endpoint = isLogin ? `${BASE_URL}/api/auth/login` : `${BASE_URL}/api/auth/register`; 
       const payload = isLogin ? {
         email: formData.email,
         password: formData.password

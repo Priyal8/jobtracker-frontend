@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import JobModal from "../components/JobModal";
 
 export default function Dashboard() {
-  const API_URL = process.env.REACT_APP_API_URL;
+  const BASE_URL = import.meta.env.VITE_API_URL;
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");  // Add error state
@@ -29,7 +29,7 @@ export default function Dashboard() {
         return;
       }
 
-      const response = await axios.get(`${API_URL}/jobs`, {
+      const response = await axios.get(`${BASE_URL}/api/jobs`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -53,7 +53,7 @@ export default function Dashboard() {
       position: "",
       company: "",
       location: "",
-      status: "pending",
+      status: "",
       notes: ""
     });
     setShowModal(true);
@@ -85,9 +85,9 @@ export default function Dashboard() {
 
     try {
       if (editingJobId) {
-        await axios.patch(`${API_URL}/jobs/${editingJobId}`, formData, config);
+        await axios.patch(`${BASE_URL}/api/jobs/${editingJobId}`, formData, config);
       } else {
-        await axios.post(`${API_URL}/jobs`, formData, config);
+        await axios.post(`${BASE_URL}/api/jobs`, formData, config);
       }
       setShowModal(false);
       fetchJobs();
@@ -108,7 +108,7 @@ export default function Dashboard() {
       },
     };
 
-    await axios.delete(`${API_URL}/jobs/${jobId}`, config);
+    await axios.delete(`${BASE_URL}/api/jobs/${jobId}`, config);
     fetchJobs(); // Refresh job list after deletion
   } catch (err) {
     console.error("Failed to delete job:", err.response?.data || err.message);
