@@ -1,6 +1,27 @@
 import React, { useState } from "react";
 import AuthModal from "../components/AuthModal";
 
+import logo from "../assets/logo.svg";
+import sphereSm from "../assets/sphere-sm.svg";
+import sphereMd from "../assets/sphere-md.svg";
+import sphereL from "../assets/sphere-l.svg";
+import rSphereMd from "../assets/r-sphere-md.svg";
+import rSphereL from "../assets/r-sphere-l.svg";
+import rSphereSm from "../assets/r-sphere-sm.svg";
+
+import trackApplication from "../assets/track-application.svg";
+import organizeJob from "../assets/organize-job.svg";
+import secureLogin from "../assets/secure-login.svg";
+
+import image1 from "../assets/image 1.svg";
+import image2 from "../assets/image 2.svg";
+import image3 from "../assets/image 3.svg";
+
+import register from "../assets/register.svg";
+import addJobs from "../assets/add-jobs.svg";
+import trackProgress from "../assets/track-progress.svg";
+
+import whyChoose2 from "../assets/why-choose 2.svg";
 
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +35,7 @@ export default function LandingPage() {
       <nav className="flex justify-between items-center px-8 py-4">
         <div className="flex items-center space-x-8 text-xl font-semibold">
           <div className="flex items-center space-x-2">
-          <span><img src="src\assets\logo.svg" /></span>
+          <span><img src={logo} /></span>
           <span className="text-2xl font-bold">Job-Tracker</span>
           </div>        
         <ul className="font-regular text-lg hidden md:flex space-x-6">
@@ -60,34 +81,34 @@ export default function LandingPage() {
       <section className="text-center px-10 py-24 bg-white relative overflow-hidden">
   {/* Left Spheres */}
   <img 
-    src="src/assets/sphere-sm.svg" 
+    src={sphereSm} 
     alt="decorative sphere" 
     className="pointer-events-none absolute left-30 top-10 w-40 h-40 opacity-100 hidden md:block md:left-10 md:top-0 md:w-24 lg:left-40 lg:top-5 lg:w-40" 
   />
   <img 
-    src="src/assets/sphere-md.svg" 
+    src={sphereMd}
     alt="decorative sphere" 
     className="pointer-events-none absolute left-0 top-1/2 transform -translate-y-1/2 opacity-100 hidden md:block md:left-5 md:top-80 md:w-38 lg:left-0 lg:top-30 lg:w-auto" 
   />
   <img 
-    src="src/assets/sphere-l.svg" 
+    src={sphereL}
     alt="decorative sphere" 
     className="pointer-events-none absolute left-0 bottom-15 opacity-100 hidden lg:block lg:bottom-0 lg:w-60" 
   />
 
   {/* Right Spheres */}
   <img 
-    src="src/assets/r-sphere-md.svg" 
+    src={rSphereMd} 
     alt="decorative sphere" 
     className="pointer-events-none absolute right-20 top-10 opacity-100 hidden md:block md:right-0 md:top-0 md:w-36 lg:right-0 lg:top-0 lg:w-auto" 
   />
   <img 
-    src="src/assets/r-sphere-l.svg" 
+    src={rSphereL}
     alt="decorative sphere" 
     className="pointer-events-none absolute right-0 top-[92%] transform -translate-y-1/2 opacity-100 hidden lg:block" 
   />
   <img 
-    src="src/assets/r-sphere-sm.svg" 
+    src={rSphereSm}
     alt="decorative sphere" 
     className="pointer-events-none absolute right-50 bottom-30 opacity-100 hidden md:block md:right-2 md:top-60 lg:block lg:right-50 lg:bottom-10" 
   />
@@ -119,7 +140,7 @@ export default function LandingPage() {
 
               {/* Image */}
               <img 
-                src="src\assets\track-application.svg" 
+                src={trackApplication} 
                 alt="track application" 
                 className="w-110 h-78 object-contain" 
               />
@@ -134,8 +155,8 @@ export default function LandingPage() {
                 <p className="text-lg mt-5" >Keep notes, deadlines, links, and contact info in one easy-to-access dashboard.</p>
               </div>
                 <img 
-                src="src\assets\organize-job.svg" 
-                alt="track application" 
+                src={organizeJob}
+                alt="organize job" 
                 className="w-40 h-40 object-contain" 
               />
             </div> 
@@ -149,8 +170,8 @@ export default function LandingPage() {
               <p className="text-lg mt-5">Your data is protected with secure authentication — your job hunt stays private.</p>
             </div>
             <img 
-                src="src\assets\secure-login.svg" 
-                alt="track application" 
+                src={secureLogin} 
+                alt="secure login" 
                 className="w-40 h-40 object-contain" 
               />
             </div>
@@ -164,43 +185,43 @@ export default function LandingPage() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
           <div className="relative bg-cardbg rounded-xl p-8  justify-center overflow-visible">
              <img 
-                src="src\assets\image 1.svg" 
+                src={image1} 
                 alt="1" 
-                className="w-20 h-20 oject-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
+                className="w-20 h-20 object-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
               />
             <h3 className="text-lg font-bold mb-1">Register</h3>
             <img 
-                src="src\assets\register.svg" 
+                src={register} 
                 alt="register" 
-                className="w-30 mx-auto my-2 h-30 oject-contain" 
+                className="w-30 mx-auto my-2 h-30 object-contain" 
               />
             <p>Create your free account in seconds.</p>
           </div>
           <div className="relative bg-cardbg rounded-xl p-8  justify-center overflow-visible">
              <img 
-                src="src\assets\image 2.svg" 
-                alt="1" 
-                className="w-20 h-20 oject-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
+                src={image2}
+                alt="2" 
+                className="w-20 h-20 object-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
               />
             <h3 className="text-lg font-bold mb-1">Add Jobs</h3>
             <img 
-                src="src\assets\add-jobs.svg" 
-                alt="register" 
-                className="w-30 mx-auto my-2 h-30 oject-contain" 
+                src={addJobs} 
+                alt="add jobs" 
+                className="w-30 mx-auto my-2 h-30 object-contain" 
               />
             <p>Fill in details like position, company, and current status.</p>
           </div>
           <div className="relative bg-cardbg rounded-xl p-8  justify-center overflow-visible">
              <img 
-                src="src\assets\image 3.svg" 
+                src={image3} 
                 alt="1" 
-                className="w-20 h-20 oject-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
+                className="w-20 h-20 object-contain absolute -top-10 left-1/2 transform -translate-x-1/2" 
               />
             <h3 className="text-lg font-bold mb-1">Track Progress</h3>
             <img 
-                src="src\assets\track-progress.svg" 
+                src={trackProgress}
                 alt="register" 
-                className="w-30 mx-auto my-2 h-30 oject-contain" 
+                className="w-30 mx-auto my-2 h-30 object-contain" 
               />
             <p>Update your job status, take notes, and stay on top of everything.</p>
           </div>
@@ -217,7 +238,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="flex justify-end">
-            <img src="src\assets\why-choose 2.svg" alt="Why Choose" className="scale-140 object-contain" />
+            <img src={whyChoose2} alt="Why Choose" className="scale-140 object-contain" />
           </div>
         </div>
       </section>
