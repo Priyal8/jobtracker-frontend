@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import JobModal from "../components/JobModal";
+import logo from "../assets/logo.svg";
 
 export default function Dashboard() {
   const BASE_URL = import.meta.env.VITE_API_URL;
@@ -122,7 +123,7 @@ export default function Dashboard() {
       {/* Navbar */}
       <nav className="bg-white shadow-md p-4 flex justify-between items-center">
         <div className="flex items-center space-x-2 text-xl font-bold text-black">
-          <span><img src="src/assets/logo.svg" alt="Logo" /></span>
+          <span><img src={logo} alt="Logo" /></span>
           <span>JobTracker</span>
         </div>
         <div className="hidden h-10 md:flex space-x-4">
